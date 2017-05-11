@@ -6,6 +6,33 @@
     <string name="articles_list">Articles list.</string>
     <string name="article_source_logo">Article source logo</string>
     <string name="error_message">Error message</string>
+    <string name="screen_name">Main Screen</string>
+    <string name="sort_by_top">top</string>
+    <string name="save_article_message">Save this article?</string>
+    <string name="save_button">SAVE</string>
+    <string name="cancel_button">CANCEL</string>
+
+    <string name="analytics_article_sources">Article sources</string>
+    <string name="analytics_read_nytimes">Read NYTimes</string>
+    <string name="analytics_nytimes">NYTimes</string>
+
+    <string name="analytics_read_bloomberg">Read Bloomberg</string>
+    <string name="analytics_bloomberg">Bloomberg</string>
+
+    <string name="analytics_read_businessinsider">Read Business Insider</string>
+    <string name="analytics_businessinsider">Business Insider</string>
+
+    <string name="analytics_read_huffpost">Read Huffington Post</string>
+    <string name="analytics_huffpost">Huffington Post</string>
+
+    <string name="analytics_read_wapo">Read Washington Post</string>
+    <string name="analytics_wapo">Washington Post</string>
+
+    <string name="analytics_read_wsj">Read WSJ</string>
+    <string name="analytics_wsj">WSJ</string>
+
+    <string name="analytics_read_saved_articles">Read My Saved Articles</string>
+    <string name="analytics_saved_articles">My Saved Articles</string>
 
     <!-- Saved Articles Activity -->
     <string name="empty_list">No articles found. Try another topic.</string>
@@ -23,6 +50,9 @@
     <string name="article_title">Article title</string>
     <string name="publication_date">Publication date</string>
     <string name="article_description">Article description</string>
+    <string name="analytics_my_saved_articles_screen">My Saved Articles Screen</string>
+    <string name="delete_this_article">Delete this article?</string>
+    <string name="delete_button">DELETE</string>
 
     <!-- Settings Activity -->
     <string name="settings_menu_item">Settings</string>
@@ -31,6 +61,7 @@
     <string name="submit_button_description">Submit button</string>
     <string name="settings_title">NewsFeed Settings</string>
     <string name="advertisement">Advertisement</string>
+    <string name="settings_screen">Settings Screen</string>
 
     <!-- Strings For Source Preference  -->
     <string name="settings_source_label">News Source</string>
@@ -66,5 +97,10 @@
     <string name="empty_widget_list">Empty widget articles</string>
     <string name="widget_article_date_description">Article date</string>
     <string name="widget_article_title_description">Article title</string>
+
+    <!-- Article -->
+    <string name="not_dated">Not Dated</string>
+
+
 
 </resources>

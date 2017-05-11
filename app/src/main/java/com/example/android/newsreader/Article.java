@@ -1,5 +1,7 @@
 package com.example.android.newsreader;
 
+import android.content.res.Resources;
+
 /**
  * Created by toddskinner on 4/24/17.
  */
@@ -38,7 +40,7 @@ public class Article {
             }
 
         } else {
-            mWebPublicationDate = "Not Dated";
+            mWebPublicationDate = Resources.getSystem().getString(R.string.not_dated);
         }
         return mWebPublicationDate;
     }

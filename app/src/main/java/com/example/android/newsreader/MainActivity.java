@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         ((MyApplication) getApplication()).startTracking();
 
         Tracker tracker = (((MyApplication) getApplication()).getTracker());
-        tracker.setScreenName("Main Screen");
+        tracker.setScreenName(getResources().getString(R.string.screen_name));
         tracker.send(new HitBuilders.ScreenViewBuilder().build());
     }
 
@@ -128,51 +128,51 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         String articleSource = sharedPrefs.getString(
                 getString(R.string.settings_source_key),
                 getString(R.string.settings_source_default));
-        String articleSortBy = "top";
+        String articleSortBy = getResources().getString(R.string.sort_by_top);
 
         Tracker tracker = (((MyApplication) getApplication()).getTracker());
 
         if(articleSource.equals(getResources().getString(R.string.settings_source_nyt_value))){
             tracker.send(new HitBuilders.EventBuilder()
-                    .setCategory("Article sources")
-                    .setAction("Read NYTimes")
-                    .setLabel("NYTimes")
+                    .setCategory(getResources().getString(R.string.analytics_article_sources))
+                    .setAction(getResources().getString(R.string.analytics_read_nytimes))
+                    .setLabel(getResources().getString(R.string.analytics_nytimes))
                     .build());
         } else if(articleSource.equals(getResources().getString(R.string.settings_source_bloomberg_value))){
             tracker.send(new HitBuilders.EventBuilder()
-                    .setCategory("Article sources")
-                    .setAction("Read Bloomberg")
-                    .setLabel("Bloomberg")
+                    .setCategory(getResources().getString(R.string.analytics_article_sources))
+                    .setAction(getResources().getString(R.string.analytics_read_bloomberg))
+                    .setLabel(getResources().getString(R.string.analytics_bloomberg))
                     .build());
         } else if(articleSource.equals(getResources().getString(R.string.settings_source_businessinsider_value))){
             tracker.send(new HitBuilders.EventBuilder()
-                    .setCategory("Article sources")
-                    .setAction("Read Business Insider")
-                    .setLabel("Business Insider")
+                    .setCategory(getResources().getString(R.string.analytics_article_sources))
+                    .setAction(getResources().getString(R.string.analytics_read_businessinsider))
+                    .setLabel(getResources().getString(R.string.analytics_businessinsider))
                     .build());
         } else if(articleSource.equals(getResources().getString(R.string.settings_source_huffpo_value))){
             tracker.send(new HitBuilders.EventBuilder()
-                    .setCategory("Article sources")
-                    .setAction("Read Huffington Post")
-                    .setLabel("Huffington Post")
+                    .setCategory(getResources().getString(R.string.analytics_article_sources))
+                    .setAction(getResources().getString(R.string.analytics_read_huffpost))
+                    .setLabel(getResources().getString(R.string.analytics_huffpost))
                     .build());
         } else if(articleSource.equals(getResources().getString(R.string.settings_source_wapo_value))){
             tracker.send(new HitBuilders.EventBuilder()
-                    .setCategory("Article sources")
-                    .setAction("Read Washington Post")
-                    .setLabel("Washington Post")
+                    .setCategory(getResources().getString(R.string.analytics_article_sources))
+                    .setAction(getResources().getString(R.string.analytics_read_wapo))
+                    .setLabel(getResources().getString(R.string.analytics_wapo))
                     .build());
         } else if(articleSource.equals(getResources().getString(R.string.settings_source_wsj_value))){
             tracker.send(new HitBuilders.EventBuilder()
-                    .setCategory("Article sources")
-                    .setAction("Read WSJ")
-                    .setLabel("WSJ")
+                    .setCategory(getResources().getString(R.string.analytics_article_sources))
+                    .setAction(getResources().getString(R.string.analytics_read_wsj))
+                    .setLabel(getResources().getString(R.string.analytics_wsj))
                     .build());
         } else {
             tracker.send(new HitBuilders.EventBuilder()
-                    .setCategory("Article sources")
-                    .setAction("Read My Saved Articles")
-                    .setLabel("My Saved Articles")
+                    .setCategory(getResources().getString(R.string.analytics_article_sources))
+                    .setAction(getResources().getString(R.string.analytics_read_saved_articles))
+                    .setLabel(getResources().getString(R.string.analytics_saved_articles))
                     .build());
         }
 
@@ -276,9 +276,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             if (direction == ItemTouchHelper.LEFT) {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setMessage("Save this article?");
+                builder.setMessage(R.string.save_article_message);
 
-                builder.setNegativeButton("SAVE", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton(R.string.save_button, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         saveItem(position);
@@ -292,7 +292,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                         }
                         return;
                     }
-                }).setPositiveButton("CANCEL", new DialogInterface.OnClickListener() {
+                }).setPositiveButton(R.string.cancel_button, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         adapter.notifyItemRemoved(position + 1);

@@ -44,7 +44,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         mAdView.loadAd(adRequest);
 
         Tracker tracker = (((MyApplication) getApplication()).getTracker());
-        tracker.setScreenName("Settings Screen");
+        tracker.setScreenName(getResources().getString(R.string.settings_screen));
         tracker.send(new HitBuilders.ScreenViewBuilder().build());
 
         final Drawable upArrow = getResources().getDrawable(R.drawable.ic_arrow_back_black, null);

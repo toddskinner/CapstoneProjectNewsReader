@@ -27,7 +27,6 @@ import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import timber.log.Timber;
 
 public class SavedArticlesActivity extends AppCompatActivity implements
         LoaderManager.LoaderCallbacks<Cursor> {
@@ -52,8 +51,6 @@ public class SavedArticlesActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_saved_articles);
         ButterKnife.bind(this);
 
-        Timber.d("SavedArticleActivity");
-
         getLoaderManager().initLoader(1, null, this);
 
         getContentResolver();
@@ -62,21 +59,17 @@ public class SavedArticlesActivity extends AppCompatActivity implements
         itemTouchHelper.attachToRecyclerView(mRecyclerView);
 
         Tracker tracker = (((MyApplication) getApplication()).getTracker());
-        tracker.setScreenName("My Saved Articles Screen");
+        tracker.setScreenName(getResources().getString(R.string.analytics_my_saved_articles_screen));
         tracker.send(new HitBuilders.ScreenViewBuilder().build());
     }
 
     @Override
     public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
-        Timber.d("Saved Articles");
-        Timber.d(SavedArticlesLoader.newAllArticlesInstance(this).toString());
         return SavedArticlesLoader.newAllArticlesInstance(this);
     }
 
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor cursor) {
-        Timber.d("Cursor");
-        Timber.d(cursor.toString());
         adapter = new SavedArticlesAdapter(cursor);
         adapter.setHasStableIds(true);
         mRecyclerView.setAdapter(adapter);
@@ -168,16 +161,16 @@ public class SavedArticlesActivity extends AppCompatActivity implements
             if (direction == ItemTouchHelper.LEFT) {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(SavedArticlesActivity.this);
-                builder.setMessage("Delete this article?");
+                builder.setMessage(getResources().getString(R.string.delete_this_article));
 
-                builder.setNegativeButton("DELETE", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton(getResources().getString(R.string.delete_button), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         deleteItem(position);
                         adapter.notifyItemRemoved(position);
                         return;
                     }
-                }).setPositiveButton("CANCEL", new DialogInterface.OnClickListener() {
+                }).setPositiveButton(getResources().getString(R.string.cancel_button), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         adapter.notifyItemRemoved(position + 1);
