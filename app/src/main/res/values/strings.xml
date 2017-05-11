@@ -12,27 +12,27 @@
     <string name="save_button">SAVE</string>
     <string name="cancel_button">CANCEL</string>
 
-    <string name="analytics_article_sources">Article sources</string>
-    <string name="analytics_read_nytimes">Read NYTimes</string>
-    <string name="analytics_nytimes">NYTimes</string>
+    <string name="analytics_article_sources" translatable="false">Article sources</string>
+    <string name="analytics_read_nytimes" translatable="false">Read NYTimes</string>
+    <string name="analytics_nytimes" translatable="false">NYTimes</string>
 
-    <string name="analytics_read_bloomberg">Read Bloomberg</string>
-    <string name="analytics_bloomberg">Bloomberg</string>
+    <string name="analytics_read_bloomberg" translatable="false">Read Bloomberg</string>
+    <string name="analytics_bloomberg" translatable="false">Bloomberg</string>
 
-    <string name="analytics_read_businessinsider">Read Business Insider</string>
-    <string name="analytics_businessinsider">Business Insider</string>
+    <string name="analytics_read_businessinsider" translatable="false">Read Business Insider</string>
+    <string name="analytics_businessinsider" translatable="false">Business Insider</string>
 
-    <string name="analytics_read_huffpost">Read Huffington Post</string>
-    <string name="analytics_huffpost">Huffington Post</string>
+    <string name="analytics_read_huffpost" translatable="false">Read Huffington Post</string>
+    <string name="analytics_huffpost" translatable="false">Huffington Post</string>
 
-    <string name="analytics_read_wapo">Read Washington Post</string>
-    <string name="analytics_wapo">Washington Post</string>
+    <string name="analytics_read_wapo" translatable="false">Read Washington Post</string>
+    <string name="analytics_wapo" translatable="false">Washington Post</string>
 
-    <string name="analytics_read_wsj">Read WSJ</string>
-    <string name="analytics_wsj">WSJ</string>
+    <string name="analytics_read_wsj" translatable="false">Read WSJ</string>
+    <string name="analytics_wsj" translatable="false">WSJ</string>
 
-    <string name="analytics_read_saved_articles">Read My Saved Articles</string>
-    <string name="analytics_saved_articles">My Saved Articles</string>
+    <string name="analytics_read_saved_articles" translatable="false">Read My Saved Articles</string>
+    <string name="analytics_saved_articles" translatable="false">My Saved Articles</string>
 
     <!-- Saved Articles Activity -->
     <string name="empty_list">No articles found. Try another topic.</string>
